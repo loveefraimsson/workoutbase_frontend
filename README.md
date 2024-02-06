@@ -1,6 +1,7 @@
 # WorkoutBase - Examensarbete
 
 Detta är ett projekt som jag gjorde som mitt examensarbete. Som användare loggar man in på sin egen sida, där kan man välja att bläddra i en övningsdatabas, spara sina favoritövningar eller göra sitt eget träningsprogram. Dessa kan man sedan se från sin profilsida. Webbsidan har också en webshop där man kan lägga sina varor man vill köpa i varukorgen.
+[Länk till hemsidan](https://vercel.com/loveefraimsson-gmailcom/workoutbase-frontend)
 
 ## Bakgrund
 
