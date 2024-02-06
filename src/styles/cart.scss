@@ -1,0 +1,154 @@
+@import "./global.scss";
+
+.cartContainer {
+    margin: 2rem 0rem 5rem 0rem;
+    padding: 0rem 1.5rem;
+
+    h2 {
+        font-family: $headingFont;
+        font-size: 1.5rem;
+    }
+
+    .backButton {
+        background-color: $beige;
+        border: 1px solid black;
+        border-radius: 5px;
+        width: fit-content;
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+        font-family: $textFont;
+        text-decoration: none;
+        color: $textColor;
+        cursor: pointer;
+        display: block;
+        margin-bottom: 1.5rem;
+
+        &:hover {
+            background-color: $hoverButton;                   
+        }
+
+        &:active {
+            background-color: $activeButton;
+            color: $white;
+        }
+    }
+
+    .table, thead, tr, td {
+        border: 1px solid lightgray;
+        border-collapse: collapse; 
+        font-family: $textFont;
+    
+        td {
+            padding: 7px 7px;
+            font-size: 0.75rem;
+            text-align: center;
+        }
+
+        .nameAndImg {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .productImage {
+            width: 4rem;
+            height: auto;
+        }
+
+        .deleteBtn {
+            background-color: $beige;
+            border: 1px solid black;
+            border-radius: 5px;
+            width: fit-content;
+            padding: 5px;
+            font-size: 0.75rem;
+            font-family: $textFont;
+            text-decoration: none;
+            color: $textColor;
+            cursor: pointer;
+            margin: 0px 7px;
+
+            &:hover {
+                background-color: $hoverButton;                   
+            }
+    
+            &:active {
+                background-color: $activeButton;
+                color: $white;
+            }
+        }
+    }
+
+    .sum {
+        font-family: $textFont;
+        font-size: 1rem;
+        font-weight: bold;
+        
+    }
+}
+
+
+// ----------------------- TABLET -------------------------------
+@media only screen and (min-width: 700px) {
+    .cartContainer {
+        .backButton {
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
+        }
+    
+        .table {
+            width: 70%;
+            margin: 0px auto;
+    
+            td {
+                padding: 7px 7px;
+                font-size: 1rem;
+            }
+    
+            .deleteBtn {
+                padding: 0.75rem 1.25rem;
+                font-size: 1rem;
+            }           
+        }
+
+        .sum {
+            text-align: center;
+        }
+    }
+}
+
+
+
+// ----------------------- LAPTOP -------------------------------
+@media only screen and (min-width: 960px) {
+    .cartContainer {
+        padding: 0rem 4rem;
+
+        h2 {
+            font-size: 2rem;
+        }
+
+        .table {
+            width: 80%;
+
+            td {
+                padding: 1rem;
+            }
+        }
+    }
+}
+
+
+// ----------------------- BIG SCREEN -------------------------------
+@media only screen and (min-width: 1200px) {
+    .cartContainer {
+
+        .table {
+
+            .productImage {
+                width: 6rem;
+                height: auto;
+            }
+        }
+    }
+}

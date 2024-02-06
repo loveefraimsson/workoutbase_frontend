@@ -1,0 +1,52 @@
+@import "./global.scss";
+
+
+.startPageContent {
+    margin: 2rem 0rem 5rem 0rem;
+    padding: 0rem 1.5rem;
+    font-family: $textFont;
+
+    p {
+        font-weight: bold;
+    }
+
+    .quickAccessLink {
+        color: $textColor;
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .welcomeTitle {
+        font-family: $headingFont;
+        font-size: 2.5rem;
+        margin: 0rem 0rem 4rem 0rem;
+    }
+}
+
+// ----------------------- TABLET -------------------------------
+@media only screen and (min-width: 700px) {
+    .startPageContent{
+        
+        .welcomeTitle {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.5rem;
+        }
+
+        .quickAccessLink:hover {
+            text-decoration: underline;
+            color: $hoverLink;
+        }
+    }
+
+}
+
+
+// ----------------------- LAPTOP -------------------------------
+@media only screen and (min-width: 960px) {
+    .startPageContent{
+        padding: 0rem 4rem;
+    }
+}

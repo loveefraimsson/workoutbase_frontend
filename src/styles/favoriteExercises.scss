@@ -1,0 +1,118 @@
+@import "./global.scss";
+
+.favoriteExercisesContainer {
+    margin: 2rem 0rem 5rem 0rem;
+    padding: 0rem 1.5rem;
+
+    .title {
+        font-family: $headingFont;
+        font-size: 1.5rem;
+    }
+
+    .backButton {
+        background-color: $beige;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+        font-family: $textFont;
+        text-decoration: none;
+        color: $textColor;
+        cursor: pointer;
+    }
+
+    table {
+        margin: 2rem auto;
+        text-align: center;
+    }
+
+    table, thead, th, tr, td {
+        border: 1px solid black;
+        border-collapse: collapse; 
+        font-family: $textFont;
+    
+        td, th {
+            padding: 1rem;
+        }
+
+        .exerciseTitle {     
+            color: $textColor;
+        }
+
+        button {
+            background-color: $beige;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+        }
+    }
+}
+
+
+// ----------------------- TABLET -------------------------------
+@media only screen and (min-width: 700px) {
+    .favoriteExercisesContainer {
+
+        .backButton {
+            font-size: 1rem; 
+            
+            &:hover {
+                background-color: $hoverButton; 
+            }
+    
+            &:active {
+                background-color: $activeButton;
+                color: $white;
+            }
+        }
+        
+        table {
+            width: 31.25rem;
+           
+            td, th {
+                padding: 1.5rem;
+                font-size: 1.25rem;
+            }
+            
+            .exerciseTitle {     
+                color: $textColor;
+
+                &:hover {
+                    text-decoration: underline; 
+                    color: $hoverLink;
+                }
+            }           
+    
+            button {
+                padding: 0.75rem 1.25rem;
+                font-size: 1rem;
+
+                &:hover {
+                    background-color: $hoverButton; 
+                }
+        
+                &:active {
+                    background-color: $activeButton;
+                    color: $white;
+                }
+            }
+        }          
+    }
+}
+
+
+// ----------------------- LAPTOP -------------------------------
+@media only screen and (min-width: 960px) {
+    .favoriteExercisesContainer {
+        .title {
+            font-size: 2rem;
+        }
+
+        table {
+            width: 80%;
+        }
+    }
+}
+

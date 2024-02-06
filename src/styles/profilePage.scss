@@ -1,0 +1,52 @@
+@import "./global.scss";
+
+
+.profilePage {
+    margin: 2rem 0rem 5rem 0rem;
+    padding: 0rem 1.5rem;
+
+    .welcomeTitleProfile {
+        font-family: $headingFont;
+        font-size:  2.5rem;
+        margin: 2rem 0rem 1rem 0rem;
+    }
+
+    p {
+        font-family: $textFont;
+    }
+
+    .trainingProgramLink, .favoriteExerciseLink {
+        font-family: $textFont;
+        color: $textColor;
+        display: block;
+        margin-bottom: 1rem;
+    }
+}
+
+
+// ----------------------- TABLET -------------------------------
+@media only screen and (min-width: 700px) {
+    .profilePage {
+    
+        .welcomeTitleProfile {
+            font-size: 3rem;
+        }
+
+        .trainingProgramLink, .favoriteExerciseLink {
+            
+            &:hover {
+                text-decoration: underline; 
+                color: $hoverLink;                 
+            }
+        }
+    }
+
+}
+
+
+// ----------------------- LAPTOP -------------------------------
+@media only screen and (min-width: 960px) {
+    .profilePage {
+        padding: 0rem 4rem
+    }
+}

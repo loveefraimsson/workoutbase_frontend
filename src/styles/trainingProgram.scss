@@ -1,0 +1,138 @@
+@import "./global.scss";
+
+.trainingProgramContainer {
+    margin: 2rem 0rem 5rem 0rem;
+    padding: 0rem 1.5rem;
+
+    .buttonSection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .backButton, .buttonToWorkoutbank {
+        width: fit-content;
+        background-color: $beige;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+        font-family: $textFont;
+        text-decoration: none;
+        color: $textColor;
+        cursor: pointer;
+    }
+
+    .title {
+        font-family: $headingFont;
+        font-size: 1.5rem;
+    }
+
+    table {
+        margin: 0px auto;
+    }
+
+    table, thead, th, tr, td {
+        font-family: $textFont;
+        font-size: 0.75rem;
+        border: 1px solid black;
+        border-collapse: collapse; 
+    
+        td, th {
+            text-align: center;
+        }
+
+        th {
+            padding: 10px;
+        }
+
+        button {
+            margin: 10px;
+            font-size: 0.75rem;
+            background-color: $beige;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+
+
+// ----------------------- TABLET -------------------------------
+@media only screen and (min-width: 700px) {
+    .trainingProgramContainer {
+
+        .backButton, .buttonToWorkoutbank {
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
+
+            &:hover {
+                background-color: $hoverButton;         
+            }
+    
+            &:active {
+                background-color: $activeButton;
+                color: $white;
+            }
+        }
+       
+        .title {
+            margin-bottom: 2rem;
+        }
+    
+        table {
+           width: 31.25rem;
+        }
+    
+        table, thead, th, tr, td {
+            font-family: $textFont;
+            font-size: 1rem;
+            border: 1px solid black;
+            border-collapse: collapse; 
+            width: fit-content;
+        
+            th {
+                padding: 1rem;
+            }
+
+            td {
+                padding: 0.75rem 1rem;
+            }
+    
+            button {
+                width: fit-content;
+                font-size: 1rem;
+                padding: 0.75rem 1.25rem;
+                
+                &:hover {
+                    background-color: $hoverButton;                   
+                }
+        
+                &:active {
+                    background-color: $activeButton;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+// ----------------------- LAPTOP -------------------------------
+@media only screen and (min-width: 960px) {
+    .trainingProgramContainer {
+        padding: 0rem 4rem;
+
+        .title {
+            font-size: 2rem;
+        }
+
+        table {
+            width: 80%;
+        }
+    }
+}

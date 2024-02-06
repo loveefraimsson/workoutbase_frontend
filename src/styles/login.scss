@@ -1,0 +1,114 @@
+@import "./global.scss";
+
+.loginForm {
+    border: 1px solid black;
+    width: fit-content;
+    margin: 0px auto;
+    padding: 3rem 3rem;
+    font-family: $textFont;
+    background-color: $beige;
+    
+
+    label {
+        font-size: 1rem;
+    }
+
+    input {
+        height: 1.5rem;
+        width: 12rem;
+        margin-bottom: 1rem;
+        background-color: $greyWhite;
+        border: 1px solid black;
+        border-radius: 5px;
+
+        &:hover {
+            background-color: $white;
+        }
+
+        &:active {
+            background-color: $white;
+        }
+    }
+
+    .loginBtn {
+        background-color: $greyWhite;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0.5em 1em;
+        font-size: 1rem;
+        font-family: $textFont;
+        margin-top: 1em;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $hoverButton;
+        }
+
+        &:active {
+            background-color: $activeButton;
+            color: $white;
+        }
+    }
+
+    .errorMessage {
+        color: $errorMessageColor;
+        font-style: italic;
+        font-size: 0.75rem;
+        margin: 1.5rem auto 0rem auto;
+        width: 12rem;
+    }
+}
+
+
+// ----------------------- TABLET -------------------------------
+@media only screen and (min-width: 700px) {
+    .loginForm {
+        padding: 4rem 5rem;
+
+        .label {
+            font-size: 1.5rem;
+        }
+
+        .inputUserName, .inputPassword {
+            height: 2rem;
+        }
+
+        .loginBtn {
+            padding: 0.75rem 1rem;
+        }
+    } 
+}
+
+
+// ----------------------- LAPTOP -------------------------------
+@media only screen and (min-width: 960px) {
+    .loginForm {
+        padding: 4rem 10rem;
+
+        .label {
+            font-size: 1.75rem;
+        }
+
+        .inputUserName, .inputPassword {
+            width: 17rem;
+        }
+
+        .errorMessage {
+            font-size: 1rem;
+            width: 17rem;
+        }
+    }
+}
+
+
+// ----------------------- BIG SCREEN -------------------------------
+@media only screen and (min-width: 1200px) {
+    .loginForm {
+        padding: 5rem 10rem;
+
+        .loginBtn {
+            padding: 0.75rem 2rem;
+            font-size: 1.25rem;
+        }
+    }
+}

@@ -1,0 +1,100 @@
+@import "./global.scss";
+
+.productCard {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 1rem 2rem;
+    width: fit-content;
+    margin: 0rem auto 3rem auto;
+    text-align: center;
+    font-family: $textFont;
+    box-shadow: 5px 8px 10px #d9d9d9;
+
+    .productCardImage {
+        width: 7rem;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+
+    .productCardLink {
+        text-decoration: none;
+        color: $textColor;
+        font-size: 1rem;
+    }
+
+    .buySection {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .buyBtn {
+            font-family: $textFont;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 1.5rem;
+            padding: 1rem;
+            background-color: $beige;
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 0.75rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $hoverButton;                   
+            }
+    
+            &:active {
+                background-color: $activeButton;
+                color: $white;
+            }
+
+            .cartIcon {
+                width: 1.25rem;
+                height: auto;
+                margin-left: 3px;
+            }
+        }        
+    }
+}
+
+
+// ----------------------- TABLET -------------------------------
+@media only screen and (min-width: 700px) {
+    .productCard {
+        padding: 1.5rem 3rem;
+
+        .productCardImage {
+            width: 10rem;
+        }
+
+        .buySection {
+
+            .buyBtn {
+                font-size: 1rem !important;
+                padding: 1.25rem;
+
+                .cartIcon {
+                    width: 1.5rem;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+
+// ----------------------- LAPTOP -------------------------------
+@media only screen and (min-width: 960px) {
+    .productCard {
+        padding: 1.5rem 4rem;
+    }
+}
+
+
+// ----------------------- BIG SCREEN -------------------------------
+@media only screen and (min-width: 1200px) {
+    .productCard {
+        margin: 1rem 1.5rem;
+    }
+}

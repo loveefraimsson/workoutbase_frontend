@@ -1,0 +1,265 @@
+@import "./global.scss";
+
+.exerciseContainer {
+    margin: 2rem 0rem 5rem 0rem;
+    padding: 0rem 1.5rem;
+
+    .backButton {
+        background-color: $beige;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+        font-family: $textFont;
+        text-decoration: none;
+        color: $textColor;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: $hoverButton;
+        }
+    
+        &:active {
+            background-color: $activeButton;
+            color: $white;
+        }
+    }
+
+    .title {
+        font-family: $headingFont;
+        font-size: 1.5rem;
+    }
+    
+    .trainingProgramForm {
+        border: 1px solid black;
+        width: fit-content;
+        padding: 1rem;
+        font-family: $textFont;
+        text-align: center;
+
+        //Removes arrows from number-input
+        /* Chrome, Safari, Edge, Opera */
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        /* Firefox */
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+
+        input, textarea {
+            background-color: $greyWhite;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin-bottom: 1rem;
+            width: 12rem;
+        }
+
+        input {
+            height: 1.5rem;          
+            padding: 0.25rem;            
+    
+            &:hover {
+                background-color: $white;
+            }
+    
+            &:active {
+                background-color: $white;
+            }
+        }
+
+        textarea {
+            padding: 0.5rem;
+        }
+
+        button {
+            background-color: $beige;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+            font-family: $textFont;
+            text-decoration: none;
+            color: $textColor;
+            cursor: pointer;
+
+            &:hover {
+                background-color: $hoverButton;                   
+            }
+    
+            &:active {
+                background-color: $activeButton;
+                color: $white;
+            }
+        }
+
+        .errorMessage {
+            color: $errorMessageColor;
+            font-size: 0.75rem;
+        }
+
+        .successMessage {
+            color: $succeccMessageColor;
+            font-size: 0.75rem;
+        }
+    }
+    
+    .favoriteButton {
+        background-color: $beige;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        font-size: 0.75rem;
+        font-family: $textFont;
+        cursor: pointer;
+        margin: 2rem 0rem;
+    
+        &:hover {
+            background-color: $hoverButton;
+        }
+    
+        &:active {
+            background-color: $activeButton;
+            color: $white;
+        }
+    }
+
+    h3 {
+        font-family: $headingFont;
+    }
+
+    .exerciseDescription {
+        margin: 0rem 0rem 1rem 0rem;
+        font-family: $textFont;
+        font-size: 1rem;
+    }
+
+    .exerciseImage {
+        display: block;
+        width: 20rem;
+        height: auto;
+        margin: 3rem auto;
+    }
+
+    iframe {
+        width: 20rem;
+        height: 12.5rem;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+
+// ----------------------- TABLET -------------------------------
+@media only screen and (min-width: 700px) {
+    .exerciseContainer {
+
+        .backButton {
+            padding: 0.75rem 1.25rem;
+            font-size: 1rem;
+        }
+
+        .title {
+            margin: 2rem 0rem;
+        }
+
+        .trainingProgramForm {
+            margin: 0px auto;
+
+            button {
+                padding: 0.75rem 1.25rem;
+                font-size: 1rem;
+            }
+
+            .errorMessage {
+                font-size: 1rem;
+            }
+
+            .successMessage {
+                font-size: 1rem;
+            }
+        }
+
+        .favoriteButton {
+            padding: 0.75rem 1.25rem;
+	        font-size: 1rem;
+        }
+
+        .exerciseDescription {
+            width: 90%;
+        }
+
+        .exerciseImage {
+            width: 70%;
+        }
+
+        iframe {
+            width: 70%;
+            height: 20rem;
+        }
+    }
+
+
+}
+
+
+// ----------------------- LAPTOP -------------------------------
+@media only screen and (min-width: 960px) {
+    .exerciseContainer {
+        padding: 0rem 4rem;
+
+        .title {
+            font-size: 2rem;
+        }
+
+        .trainingProgramForm {
+            padding: 1.75rem 4rem;
+
+            p {
+                font-size: 1.25rem;
+            }
+
+            input {
+                height: 2rem;
+                font-size: 1rem;
+                width: 15rem;
+            }
+
+            textarea {
+                font-size: 1rem;
+                width: 17rem;
+            }
+
+            button {
+                font-size: 1.25rem;
+                padding: 0.75rem 3rem;
+            }          
+        }
+
+        .favoriteButton {
+            padding: 0.75rem 1.75rem;
+            font-size: 1.25rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        iframe {
+            height: 25rem;
+        }
+
+    }
+}
+
+
+// ----------------------- BIG SCREEN -------------------------------
+@media only screen and (min-width: 1200px) {
+    .exerciseContainer {
+        iframe {
+            height: 40rem;
+        }
+    }
+}
